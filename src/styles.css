@@ -1,0 +1,400 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf9f9;
+    height: 100px; /* Ajustei um pouco mais a altura do Navbar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container do Navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    max-width: 1300px;
+    justify-content: space-between; /* Distribui os elementos corretamente */
+}
+
+/* Links do Navbar alinhados à esquerda */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Araboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #ff69b4;
+}
+
+/* Logo maior e centralizada */
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-logo img {
+    height: 350px; /* Agora a logo está maior */
+    width: auto;
+    max-width: 320px; /* Tamanho maior */
+    display: block;
+}
+
+/* Barra de pesquisa e botão do WhatsApp à direita */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 180px;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe5d;
+}
+
+/* Garante que a Home fique empilhada verticalmente */
+.home-container {
+    display: flex;
+    flex-direction: column; /* Faz os elementos ficarem um abaixo do outro */
+    align-items: center;
+    width: 100%;
+}
+
+/* Seção do Banner - Garante que ele ocupa a largura total */
+.banner-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 760px;
+    object-fit: cover;
+    padding: 80px
+}
+
+/* Seção das Categorias */
+.categories-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Espaço entre o banner e as categorias */
+    margin-bottom: 50px; /* Novo espaçamento entre as categorias e o rodapé */
+}
+
+/* Centraliza os blocos em uma única linha */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Cada bloco de categoria */
+.category-item {
+    width: 30%;
+    max-width: 350px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 95px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(166, 159, 159); /* Adicionando borda preta fina */
+}
+
+/* Imagens das categorias */
+.category-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Texto abaixo das imagens */
+.category-text {
+    margin-top: 10px;
+    font-family: 'Araboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+
+}
+
+/* Importar a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilo do Título */
+.section-title {
+    font-family: 'Araboto', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Estilo do Preço */
+.category-price {
+    font-family: 'Araboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #27ae60; /* Verde escuro para destacar o preço */
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #6a0dad; /* Fundo roxo */
+    color: white; /* Texto branco */
+    padding: 50px;
+    width: 100%;
+    font-family: 'Araboto', sans-serif;
+    position: relative;
+}
+
+/* Centralizar o conteúdo do rodapé */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Alinhando o texto à esquerda */
+    padding-left: 20px; /* Pequeno espaçamento à esquerda */
+}
+
+/* Estilo do texto do rodapé */
+.footer-text {
+    font-size: 16px;
+    margin: 25px 0;
+}
+
+/* Estilos do Formulário de Contato */
+.contato-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contato-title {
+    font-size: 28px;
+    color: #6a0dad;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato-form label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contato-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contato-button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contato-button:hover {
+    background-color: #570a9b;
+}
+
+/* Container da seção de temas */
+.themes-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Grid de temas */
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de cada bloco de tema */
+.theme-item {
+    background-color: white;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Efeito de hover */
+.theme-item:hover {
+    transform: scale(1.05);
+}
+
+/* Imagens dentro dos blocos */
+.theme-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Nome do tema */
+.theme-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Preço do tema */
+.theme-price {
+    font-size: 18px;
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Campo de pesquisa */
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+/* Efeito ao focar no campo de pesquisa */
+.search-bar:focus {
+    border-color: #6a0dad;
+    outline: none;
+}
+
+/* Estilizando o botão Saiba Mais */
+.saiba-mais-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  .saiba-mais-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilizando o modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-content ul {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  .modal-content li {
+    margin-bottom: 5px;
+  }
+  
+  .close-btn {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background: darkred;
+  }
+

@@ -1,0 +1,39 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles.css"; // Importando o CSS atualizado
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        
+        {/* Links do menu - alinhados à esquerda */}
+        <ul className="nav-links">
+          <li><Link to="/" className="nav-item">Home</Link></li>
+          <li><Link to="/temas" className="nav-item">Temas</Link></li>
+          <li><Link to="/contato" className="nav-item">Contato</Link></li>
+        </ul>
+
+        {/* Logo centralizada */}
+        <div className="navbar-logo">
+            <img src="/images/logo.png" alt="Logo GuNic Festas" className="logo"/>
+        </div>
+
+        {/* Apenas o botão do WhatsApp */}
+        <div className="navbar-right">
+          <a
+            href="https://wa.me/5521990384178?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-button"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
