@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles.css"; // Certifique-se de importar os estilos
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -18,28 +19,22 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setMensagemEnviada(true);
-        setTimeout(() => {
-          window.location.href = "/";
-        }, 3000);
-      } else {
-        alert("Erro ao enviar a mensagem. Tente novamente.");
-      }
-    } catch (error) {
-      alert("Erro ao conectar ao servidor.");
+  
+    const response = await fetch("https://formspree.io/f/mjkgebko", { 
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
+      setMensagemEnviada(true);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 3000);
+    } else {
+      alert("Erro ao enviar a mensagem. Tente novamente.");
     }
   };
 
