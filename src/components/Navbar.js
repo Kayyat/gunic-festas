@@ -28,7 +28,7 @@ const Navbar = () => {
         {/* Apenas o botão do WhatsApp */}
         <div className="navbar-right">
           <a
-            href="https://wa.me/5521990384178?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
+            href="https://wa.me/5521977141344?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-button"
