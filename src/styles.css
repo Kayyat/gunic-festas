@@ -1,10 +1,13 @@
+/* Importar a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #faf9f9;
-    height: 100px; /* Ajustei um pouco mais a altura do Navbar */
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -17,9 +20,11 @@
 .navbar-container {
     display: flex;
     align-items: center;
-    width: 95%;
+    width: 100%;
+    padding: 0 30px;
     max-width: 1300px;
-    justify-content: space-between; /* Distribui os elementos corretamente */
+    justify-content: space-between;
+    position: relative;
 }
 
 /* Links do Navbar alinhados à esquerda */
@@ -47,13 +52,17 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-logo img {
-    height: 350px; /* Agora a logo está maior */
+    height: auto;
     width: auto;
-    max-width: 320px; /* Tamanho maior */
-    display: block;
+    max-height: 80px;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 /* Barra de pesquisa e botão do WhatsApp à direita */
@@ -71,22 +80,48 @@
 }
 
 .whatsapp-button {
+    display: flex;
+    align-items: center;
     background-color: #25D366;
     color: white;
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 4px;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .whatsapp-button:hover {
     background-color: #1ebe5d;
 }
 
+.whatsapp-icon {
+    margin-right: 5px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.bar.open {
+    background-color: #ff69b4;
+}
+
 /* Garante que a Home fique empilhada verticalmente */
 .home-container {
     display: flex;
-    flex-direction: column; /* Faz os elementos ficarem um abaixo do outro */
+    flex-direction: column;
+    /* Faz os elementos ficarem um abaixo do outro */
     align-items: center;
     width: 100%;
 }
@@ -102,7 +137,7 @@
     width: 100%;
     max-height: 760px;
     object-fit: cover;
-    padding: 80px
+    padding: 80px 0;
 }
 
 /* Seção das Categorias */
@@ -110,8 +145,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Espaço entre o banner e as categorias */
-    margin-bottom: 50px; /* Novo espaçamento entre as categorias e o rodapé */
+    margin-top: 30px;
+    /* Espaço entre o banner e as categorias */
+    margin-bottom: 50px;
+    /* Novo espaçamento entre as categorias e o rodapé */
 }
 
 /* Centraliza os blocos em uma única linha */
@@ -132,7 +169,8 @@
     padding: 95px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgb(166, 159, 159); /* Adicionando borda preta fina */
+    border: 1px solid rgb(166, 159, 159);
+    /* Adicionando borda preta fina */
 }
 
 /* Imagens das categorias */
@@ -153,9 +191,6 @@
 
 }
 
-/* Importar a fonte Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* Estilo do Título */
 .section-title {
     font-family: 'Araboto', sans-serif;
@@ -171,17 +206,19 @@
     font-family: 'Araboto', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #27ae60; /* Verde escuro para destacar o preço */
+    color: #27ae60;
+    /* Verde escuro para destacar o preço */
     text-align: center;
     margin-top: 5px;
 }
 
 /* Rodapé */
 .footer {
-    background-color: #6a0dad; /* Fundo roxo */
-    color: white; /* Texto branco */
+    background-color: #6a0dad;
+    /* Fundo roxo */
+    color: white;
+    /* Texto branco */
     padding: 50px;
-    width: 100%;
     font-family: 'Araboto', sans-serif;
     position: relative;
 }
@@ -190,8 +227,10 @@
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Alinhando o texto à esquerda */
-    padding-left: 20px; /* Pequeno espaçamento à esquerda */
+    text-align: left;
+    /* Alinhando o texto à esquerda */
+    padding-left: 20px;
+    /* Pequeno espaçamento à esquerda */
 }
 
 /* Estilo do texto do rodapé */
@@ -264,8 +303,8 @@
 /* Container da seção de temas */
 .themes-container {
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 40px;
+    margin: 85px auto;
+    padding: 20px;
     text-align: center;
 }
 
@@ -281,7 +320,7 @@
 /* Estilo de cada bloco de tema */
 .theme-item {
     background-color: white;
-    padding: 70px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -296,7 +335,7 @@
 /* Imagens dentro dos blocos */
 .theme-image {
     width: 100%;
-    height: 250px;
+    height: 330px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -347,14 +386,14 @@
     font-size: 14px;
     margin-top: 10px;
     transition: background 0.3s;
-  }
-  
-  .saiba-mais-btn:hover {
+}
+
+.saiba-mais-btn:hover {
     background-color: #45a049;
-  }
-  
-  /* Estilizando o modal */
-  .modal-overlay {
+}
+
+/* Estilizando o modal */
+.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -364,27 +403,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+    z-index: 9999;
+}
+
+.modal-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
     text-align: center;
-  }
-  
-  .modal-content ul {
+}
+
+.modal-content ul {
     text-align: left;
     margin-top: 10px;
-  }
-  
-  .modal-content li {
+}
+
+.modal-content li {
     margin-bottom: 5px;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     background: red;
     color: white;
     padding: 10px;
@@ -392,9 +432,162 @@
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
-  }
-  
-  .close-btn:hover {
-    background: darkred;
-  }
+}
 
+.close-btn:hover {
+    background: darkred;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #faf9f9;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-logo img {
+        max-height: 300px;
+        max-width: 225px;
+    }
+
+    .whatsapp-text {
+        display: none;
+    }
+
+    .whatsapp-icon {
+        margin-right: 0;
+    }
+
+    .whatsapp-button {
+        padding: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-container {
+        padding-left: 0px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        word-wrap: break-word;
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    .banner-image {
+        max-height: 400px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+
+    .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item {
+        width: 90%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .category-image {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .category-text, .category-price {
+        font-size: 16px;
+    }
+
+    .themes-container {
+        padding: 10px;
+        margin: 120px auto;
+    }
+
+    .themes-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .theme-item {
+        width: 90%;
+        max-width: 300px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .theme-image {
+        height: 300px;
+    }
+
+    .theme-title {
+        font-size: 18px;
+    }
+
+    .theme-price {
+        font-size: 16px;
+    }
+
+    .saiba-mais-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .search-bar {
+        max-width: 320px;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 85%;
+    }
+
+    .contato-container {
+        max-width: 370px;
+        margin: 130px auto;
+        padding: 15px;
+    }
+
+    .contato-form input, .contato-form textarea {
+        width: 94%;
+    }
+}

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 import "../styles.css"; // Importando o CSS atualizado
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+        </div>
         
         {/* Links do menu - alinhados à esquerda */}
-        <ul className="nav-links">
-          <li><Link to="/" className="nav-item">Home</Link></li>
-          <li><Link to="/temas" className="nav-item">Temas</Link></li>
-          <li><Link to="/contato" className="nav-item">Contato</Link></li>
+        <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+          <li><Link to="/" className="nav-item" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/temas" className="nav-item" onClick={() => setMenuOpen(false)}>Temas</Link></li>
+          <li><Link to="/contato" className="nav-item" onClick={() => setMenuOpen(false)}>Contato</Link></li>
         </ul>
 
         {/* Logo centralizada */}
@@ -27,7 +33,8 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="whatsapp-button"
           >
-            WhatsApp
+            <FaWhatsapp size={20} className="whatsapp-icon" />
+            <span className="whatsapp-text">WhatsApp</span>
           </a>
         </div>
 
