@@ -591,3 +591,44 @@
         width: 94%;
     }
 }
+
+/* Estilizando o Botão do Instagram */
+.instagram-button {
+    background-color: #E4405F; /* Cor do Instagram */
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.instagram-button:hover {
+    background-color: #c13584;
+}
+
+/* Ajuste no Mobile */
+@media screen and (max-width: 768px) {
+    .navbar-right {
+        flex-direction: column; /* Alinha os botões na vertical */
+        gap: 10px;
+    }
+
+    .instagram-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        justify-content: center;
+        width: 100%;
+        max-width: 200px; /* Mantém um tamanho equilibrado */
+    }
+
+    .whatsapp-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        justify-content: center;
+        width: 100%;
+        max-width: 200px;
+    }
+}
