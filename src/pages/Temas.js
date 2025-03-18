@@ -49,7 +49,7 @@ const themes = [
   { "id": 46, "img": "/images/boiadeira.jpg", "title": "BOIADEIRA", "price": "A partir de R$ 145,00" },
   { "id": 47, "img": "/images/bolofofofos 2.jpg", "title": "BOLOFOFOS 2", "price": "A partir de R$ 145,00" },
   { "id": 48, "img": "/images/bolofofos.jpg", "title": "BOLOFOFOS", "price": "A partir de R$ 145,00" },
-  { "id": 49, "img": "/images/boo mostros sa.jpg", "title": "BOO MOSTROS SA", "price": "A partir de R$ 145,00" },
+  { "id": 49, "img": "/images/boo mostros sa.jpg", "title": "BOO MONSTROS SA", "price": "A partir de R$ 145,00" },
   { "id": 50, "img": "/images/borboleta 2.jpg", "title": "BORBOLETA 2", "price": "A partir de R$ 145,00" },
   { "id": 51, "img": "/images/borboleta.jpg", "title": "BORBOLETA", "price": "A partir de R$ 145,00" },
   { "id": 52, "img": "/images/boteco 2.jpg", "title": "BOTECO 2", "price": "A partir de R$ 145,00" },
